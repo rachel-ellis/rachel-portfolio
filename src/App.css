@@ -8,6 +8,7 @@ body {
   position: absolute;
   left: 50%;
   bottom: 0;
+  z-index: -1;
   transform: translate(-50%, -50%);
 }
 
@@ -40,7 +41,6 @@ body {
 h1 {
   color: #4A1019;
   padding: 1.5rem;
-  height: 25%;
   white-space: pre-wrap;
   text-align: center;
 }
@@ -50,4 +50,51 @@ p {
   position: absolute;
   padding: 2.5rem;
   text-align: center;
+}
+
+.mobile {
+  display: none;
+}
+.desktop {
+  display: block;
+}
+
+@media screen and (max-width: 850px) {
+  .mobile {
+    display: block;
+  }
+
+  .me {
+    height: 50vmin;
+    width: 50vmin;
+    left: 50%;
+    top: 35%;
+  }  
+
+  .logo {
+    height: 20vmin;
+    width: 60vmin;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -30%);
+  }
+
+  h1 {
+    font-size: 30px;
+    top: 45%;
+    position: absolute;
+  }
+
+  p {
+    font-size: 25px;
+    width: 80%;
+    left: 10%;
+    top: 65%;
+    padding: 0rem;
+  }
+
+  .desktop {
+    display: none;
+  }
 }

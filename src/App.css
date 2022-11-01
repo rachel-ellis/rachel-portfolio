@@ -38,23 +38,26 @@ body {
   right: 0;
 }
 
-h1 {
+.split.left h1 {
   color: #4A1019;
   padding: 1.5rem;
   white-space: pre-wrap;
   text-align: center;
+  font-size: 3.5vmin;
 }
 
-p {
+.split.left p {
   font-size: 30px;
   position: absolute;
-  padding: 2.5rem;
+  padding: 3.5rem;
+  top: 40%;
   text-align: center;
 }
 
 .mobile {
   display: none;
 }
+
 .desktop {
   display: block;
 }
@@ -80,13 +83,13 @@ p {
     transform: translate(-50%, -30%);
   }
 
-  h1 {
+  .split.left h1 {
     font-size: 30px;
     top: 45%;
     position: absolute;
   }
 
-  p {
+  .split.left p {
     font-size: 25px;
     width: 80%;
     left: 10%;

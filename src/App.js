@@ -1,34 +1,24 @@
-import rachel from './rachel.svg';
-import enggLogo from './enggLogo.svg';
+
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 import NavBar from './components/navBar';
+import { Home } from './screens/Home';
+import AboutMe from './screens/AboutMe';
 import './App.css';
 
-const introText = `const intro = “Hi! My " \n + "name is Rachel Ellis”); \n` +
-// eslint-disable-next-line no-useless-concat
-`console.log($` + `{intro});`;
-
-const introTextMobile = "Hey, my name is Rachel Ellis!";
-
-function App() {
-  return (
+const App = () => (
     <div className="App">
-      <NavBar/>
-      <div className="split left desktop">
-        <h1>{introText}</h1>
-        <p>I’m a 4th year Software Engineering student at the University of Alberta </p>
-        <img src={enggLogo} className="logo" alt="engg logo" />
-      </div>
-      <div className="split right desktop">
-        <img src={rachel} className="me" alt="me!" />
-      </div>
-      <div className="mobile">
-        <h1>{introTextMobile}</h1>
-        <p>I’m a 4th year Software Engineering student at the University of Alberta </p>
-        <img src={rachel} className="me" alt="me!" />
-        <img src={enggLogo} className="logo" alt="engg logo" />
-      </div>
+      <NavBar/> 
+    <Router><Routes>
+        <Route exact path='/' element={< Home />}></Route>
+        <Route exact path='/landing' element={< Home />}></Route>
+        <Route exact path='/about' element={< AboutMe />}></Route>
+    </Routes></Router>
     </div>
-  );
-}
+);
 
 export default App;

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import navIcon from './navIcon.svg';
 import "./navBar.css"
+import pdf from '../RachelEllisResume.pdf'
 
 export default function NavBar() {
     const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -22,7 +23,8 @@ export default function NavBar() {
                 <a href="/about">About Me</a>
             </li>
             <li>
-                <a href="/resume">Resume</a>
+            <a target="_blank" href={pdf}>Resume</a>
+                {/* <a href="/resume">Resume</a> */}
             </li>
             <li>
                 <a href="/contact">Contact</a>

@@ -8,16 +8,17 @@ import {
 import NavBar from './components/navBar';
 import { Home } from './screens/Home';
 import AboutMe from './screens/AboutMe';
-import './App.css';
 
 const App = () => (
     <div className="App">
       <NavBar/> 
-    <Router><Routes>
-        <Route exact path='/' element={< Home />}></Route>
+    <Router>
+      <Routes>
+        <Route exact p2ath='/' element={< Home />}></Route>
         <Route exact path='/landing' element={< Home />}></Route>
         <Route exact path='/about' element={< AboutMe />}></Route>
-    </Routes></Router>
+      </Routes>
+    </Router>
     </div>
 );
 
